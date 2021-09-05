@@ -114,30 +114,26 @@ const Home = () => {
 
                          <Autocomplete
                               id="free-solo-demo1"
-                              freeSolo
                               options={emailsuggestionslist}
                               getOptionLabel={(option) => option}
                               style={{ width: 368 }}
                               value={emailA}
                               onChange={(event, value) => {
-                                   if (value) {
                                         setEmailA(value);
-                                   } else {
-                                        setEmailA("");
-                                   }
                               }}
                               renderInput={(params) => (
                                    <TextField
                                         {...params}
                                         id="outlined-secondary"
                                         label="Attacker's Email"
+                                        helperText="Only emails in the dropdown list are available for now!"
                                         variant="outlined"
                                         color="secondary"
                                         style={{ marginTop: "20px" }}
-                                        value={emailA}
-                                        onChange={(event) => {
-                                             setEmailA(event.target.value);
-                                        }}
+                                        // value={emailA}
+                                        // onChange={(event) => {
+                                        //      setEmailA(event.target.value);
+                                        // }}
                                         className={design.input}
                                         required
                                    />
@@ -167,7 +163,7 @@ const Home = () => {
                                         label="Victim's Email"
                                         variant="outlined"
                                         color="secondary"
-                                        style={{ marginTop: "20px" }}
+                                        style={{ marginTop: "40px" }}
                                         value={emailV}
                                         onChange={(event) => {
                                              setEmailV(event.target.value);
@@ -188,7 +184,7 @@ const Home = () => {
                                         <a
                                              style={{ textDecoration: "none" }}
                                              href={
-                                                  mainurl +
+                                                  "https://vvvinit.github.io/NS-Pretexting/#/" +
                                                   "insertion/" +
                                                   emailA +
                                                   "/" +
@@ -232,13 +228,13 @@ const Home = () => {
                          {" "}
                          GOTO :
                          <a
-                              href={mainurl + "detection/"}
+                              href={'https://vvvinit.github.io/NS-Pretexting/#/detection/'}
                               style={{ textDecoration: "none" }}
                          >
                               <Button color="primary">Detection</Button>
                          </a>
                          <a
-                              href={mainurl + "prevention/"}
+                              href={"https://vvvinit.github.io/NS-Pretexting/#/prevention/"}
                               style={{ textDecoration: "none" }}
                          >
                               <Button color="primary">Prevention</Button>

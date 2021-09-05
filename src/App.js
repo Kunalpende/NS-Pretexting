@@ -1,6 +1,10 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+     HashRouter as Router,
+     Route,
+     Switch,
+   } from "react-router-dom";
 import Insertion from "./Insertion";
 import Home from "./Home";
 import Detection from "./Detection";
@@ -26,7 +30,7 @@ const theme = createMuiTheme({
 function App() {
      return (
           <ThemeProvider theme={theme}>
-               <Router>
+               <Router basename={process.env.PUBLIC_URL}>
                     <Switch>
                          <Route exact path="/" component={Home} />
                          <Route
@@ -36,7 +40,7 @@ function App() {
                          />
                          <Route path="/detection" component={Detection} />
                          <Route path="/prevention" component={Prevention} />
-                         <Route path="*" component={Home} />
+                         <Route path="/*" component={Home} />
                     </Switch>
                </Router>
           </ThemeProvider>
