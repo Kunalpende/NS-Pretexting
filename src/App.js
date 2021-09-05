@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Insertion from "./Insertion";
+import Home from "./Home";
+import Detection from "./Detection";
+import Prevention from "./Prevention";
+import { createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
+var favicon = document.getElementById("favicon");
+favicon.href = "%PUBLIC_URL%/favicon.ico";
+document.title = "IIITA - Pretexting Project";
+
+const theme = createMuiTheme({
+     typography: {
+          fontFamily: [
+               "Montserrat",
+               "Roboto",
+               '"Helvetica Neue"',
+               "Arial",
+               "sans-serif",
+          ].join(","),
+     },
+});
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+     return (
+          <ThemeProvider theme={theme}>
+               <Router>
+                    <Switch>
+                         <Route exact path="/" component={Home} />
+                         <Route
+                              exact
+                              path="/insertion/:emailA/:emailV"
+                              component={Insertion}
+                         />
+                         <Route path="/detection" component={Detection} />
+                         <Route path="/prevention" component={Prevention} />
+                         <Route path="*" component={Home} />
+                    </Switch>
+               </Router>
+          </ThemeProvider>
+     );
 }
 
 export default App;
