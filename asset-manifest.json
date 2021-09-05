@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/NS-Pretexting/static/css/main.6a9142d5.chunk.css",
+    "main.css": "/NS-Pretexting/static/css/main.1d23462b.chunk.css",
     "main.js": "/NS-Pretexting/static/js/main.226da635.chunk.js",
     "main.js.map": "/NS-Pretexting/static/js/main.226da635.chunk.js.map",
     "runtime-main.js": "/NS-Pretexting/static/js/runtime-main.a2bc28f7.js",
@@ -10,13 +10,13 @@
     "static/js/3.3c91f120.chunk.js": "/NS-Pretexting/static/js/3.3c91f120.chunk.js",
     "static/js/3.3c91f120.chunk.js.map": "/NS-Pretexting/static/js/3.3c91f120.chunk.js.map",
     "index.html": "/NS-Pretexting/index.html",
-    "static/css/main.6a9142d5.chunk.css.map": "/NS-Pretexting/static/css/main.6a9142d5.chunk.css.map",
+    "static/css/main.1d23462b.chunk.css.map": "/NS-Pretexting/static/css/main.1d23462b.chunk.css.map",
     "static/js/2.2d406182.chunk.js.LICENSE.txt": "/NS-Pretexting/static/js/2.2d406182.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a2bc28f7.js",
     "static/js/2.2d406182.chunk.js",
-    "static/css/main.6a9142d5.chunk.css",
+    "static/css/main.1d23462b.chunk.css",
     "static/js/main.226da635.chunk.js"
   ]
 }
