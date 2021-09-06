@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/NS-Pretexting/static/css/main.ad9a2ee7.chunk.css",
-    "main.js": "/NS-Pretexting/static/js/main.d3b3d2ea.chunk.js",
-    "main.js.map": "/NS-Pretexting/static/js/main.d3b3d2ea.chunk.js.map",
+    "main.css": "/NS-Pretexting/static/css/main.5b8e91ed.chunk.css",
+    "main.js": "/NS-Pretexting/static/js/main.86d9ced0.chunk.js",
+    "main.js.map": "/NS-Pretexting/static/js/main.86d9ced0.chunk.js.map",
     "runtime-main.js": "/NS-Pretexting/static/js/runtime-main.8da3df67.js",
     "runtime-main.js.map": "/NS-Pretexting/static/js/runtime-main.8da3df67.js.map",
     "static/js/2.95636ebf.chunk.js": "/NS-Pretexting/static/js/2.95636ebf.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f39c4165.chunk.js": "/NS-Pretexting/static/js/3.f39c4165.chunk.js",
     "static/js/3.f39c4165.chunk.js.map": "/NS-Pretexting/static/js/3.f39c4165.chunk.js.map",
     "index.html": "/NS-Pretexting/index.html",
-    "static/css/main.ad9a2ee7.chunk.css.map": "/NS-Pretexting/static/css/main.ad9a2ee7.chunk.css.map",
+    "static/css/main.5b8e91ed.chunk.css.map": "/NS-Pretexting/static/css/main.5b8e91ed.chunk.css.map",
     "static/js/2.95636ebf.chunk.js.LICENSE.txt": "/NS-Pretexting/static/js/2.95636ebf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8da3df67.js",
     "static/js/2.95636ebf.chunk.js",
-    "static/css/main.ad9a2ee7.chunk.css",
-    "static/js/main.d3b3d2ea.chunk.js"
+    "static/css/main.5b8e91ed.chunk.css",
+    "static/js/main.86d9ced0.chunk.js"
   ]
 }
