@@ -15,9 +15,7 @@ const defaultProps = {
      style: {},
 };
 
-var favicon = document.getElementById("favicon");
-favicon.href = "%PUBLIC_URL%/favicon.ico";
-document.title = "IIITA - Pretexting Project";
+
 
 const emailsuggestionslist = [
      "iit2019232@iiita.ac.in",
@@ -29,6 +27,9 @@ const emailsuggestionslist = [
 ];
 
 const Home = () => {
+     var favicon = document.getElementById("favicon");
+     favicon.href = "/favicon.ico";
+     document.title = "IIITA - Pretexting Project";
      const [visibility, setVisibility] = useState(false);
      const [emailA, setEmailA] = useState("");
      const [emailV, setEmailV] = useState("");
@@ -108,7 +109,7 @@ const Home = () => {
                          borderRadius={16}
                          className={design.form}
                          {...defaultProps}
-                         bgcolor="#fffaf0"
+                         bgcolor="#ebffda"
                     >
                          <div className={design.header2}>Insertion</div>
 
@@ -184,7 +185,7 @@ const Home = () => {
                                         <a
                                              style={{ textDecoration: "none" }}
                                              href={
-                                                  "https://vvvinit.github.io/NS-Pretexting/#/" +
+                                                  mainurl +
                                                   "insertion/" +
                                                   emailA +
                                                   "/" +
@@ -228,13 +229,13 @@ const Home = () => {
                          {" "}
                          GOTO :
                          <a
-                              href={'https://vvvinit.github.io/NS-Pretexting/#/detection/'}
+                              href={mainurl+'detection/'}
                               style={{ textDecoration: "none" }}
                          >
                               <Button color="primary">Detection</Button>
                          </a>
                          <a
-                              href={"https://vvvinit.github.io/NS-Pretexting/#/prevention/"}
+                              href={mainurl+"prevention/"}
                               style={{ textDecoration: "none" }}
                          >
                               <Button color="primary">Prevention</Button>
