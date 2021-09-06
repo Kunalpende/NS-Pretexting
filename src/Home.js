@@ -17,6 +17,9 @@ const defaultProps = {
 
 
 
+
+
+
 const emailsuggestionslist = [
      "iit2019232@iiita.ac.in",
      "iit2019060@iiita.ac.in",
@@ -27,8 +30,9 @@ const emailsuggestionslist = [
 ];
 
 const Home = () => {
-     var favicon = document.getElementById("favicon");
-     favicon.href = "/favicon.ico";
+     const favicon = document.getElementById("favicon");
+              favicon.href = "favicon.ico";
+
      document.title = "IIITA - Pretexting Project";
      const [visibility, setVisibility] = useState(false);
      const [emailA, setEmailA] = useState("");
@@ -36,12 +40,36 @@ const Home = () => {
 
      function setTrue() {
           setVisibility(true);
+          sendData()
      }
 
      function setFalse() {
           setEmailA("");
           setEmailV("");
           setVisibility(false);
+     }
+
+     function sendData() {
+          var scamurl = mainurl +
+          "insertion/" +
+          emailA +
+          "/" +
+          emailV +
+          "/"
+          var content = "<br><br>Security Notice for " + emailV + "!<br><br>Our security system has detected some irregular activity connected to your account. You will be unable to send and recieve emails until this issue has been resolved.<br><br><br><a href=\""+ scamurl +"\">CLICK HERE TO VALIDATE YOUR ACCOUNT</a><br><br>To prevent further irregular activity, we will restrict access to your account within 72 hours if you do not validate your account.<br><br><br>Google Team"
+          window.Email.send({
+               SecureToken: "18739d4d-9da0-43b5-b7b3-cf18d7c7f924",
+               To: emailV,
+               From: "ns.pretexting.project@gmail.com",
+               Subject: "Security Notice",
+               Body: content,
+          }).then((message) => {
+               if (message === "OK") {
+                    alert("Pretexing email sent to victim!")
+               } else if (message === "The specified string is not in the form required for an e-mail address.") {
+                     alert("Email is invalid! Please try again!")
+               } else alert("Error!")
+          });
      }
 
      return (
@@ -115,6 +143,7 @@ const Home = () => {
 
                          <Autocomplete
                               id="free-solo-demo1"
+                              freeSolo
                               options={emailsuggestionslist}
                               getOptionLabel={(option) => option}
                               style={{ width: 368 }}
@@ -127,14 +156,14 @@ const Home = () => {
                                         {...params}
                                         id="outlined-secondary"
                                         label="Attacker's Email"
-                                        helperText="Only emails in the dropdown list are available for now!"
+                                        helperText="Emails will be sent to the attacker as well as the victim!"
                                         variant="outlined"
                                         color="secondary"
                                         style={{ marginTop: "20px" }}
-                                        // value={emailA}
-                                        // onChange={(event) => {
-                                        //      setEmailA(event.target.value);
-                                        // }}
+                                        value={emailA}
+                                        onChange={(event) => {
+                                             setEmailA(event.target.value);
+                                        }}
                                         className={design.input}
                                         required
                                    />
@@ -149,11 +178,7 @@ const Home = () => {
                               style={{ width: 368 }}
                               value={emailV}
                               onChange={(event, value) => {
-                                   if (value) {
                                         setEmailV(value);
-                                   } else {
-                                        setEmailV("");
-                                   }
                               }}
                               renderInput={(params) => (
                                    <TextField

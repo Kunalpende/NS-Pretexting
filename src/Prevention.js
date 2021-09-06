@@ -17,9 +17,10 @@ const defaultProps = {
 };
 
 const Prevention = () => {
-     var favicon = document.getElementById("favicon");
-     favicon.href = "/favicon.ico";
-     document.title = "Pretexting - Prevention";
+     const favicon = document.getElementById("favicon");
+              favicon.href = "favicon.ico";
+
+     document.title = "IIITA - Pretexting Project";
      const [visibility1, setVisibility1] = useState(false);
      const [visibility2, setVisibility2] = useState(false);
      const [visibility3, setVisibility3] = useState(false);

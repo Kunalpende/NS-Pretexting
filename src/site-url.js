@@ -1,2 +1,2 @@
-var mainurl = "http://localhost:3000/NS-Pretexting/#/"
+var mainurl = "https://vvvinit.github.io/NS-Pretexting/#/"
 export default mainurl

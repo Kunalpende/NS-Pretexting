@@ -28,6 +28,12 @@ const theme = createMuiTheme({
 });
 
 function App() {
+
+     const favicon = document.getElementById("favicon");
+              favicon.href = "favicon.ico";
+
+     document.title = "IIITA - Pretexting Project";
+     
      return (
           <ThemeProvider theme={theme}>
                <Router basename={process.env.PUBLIC_URL}>
